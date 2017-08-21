@@ -1,0 +1,123 @@
+#bodyer img{
+	display: block;
+	margin: 80px auto 15px;	
+}
+#bodyer p{
+	font-size: 24px;
+	text-align: center;
+}
+
+#bodyer .img-center-box{
+	margin-top:35%;
+	text-align:center;
+}
+
+#bodyer .img-center-box p{
+	font-size: 14px;
+	color:#666;
+}
+
+#bodyer .img-center-box .pay-suc{
+	font-size:24px;
+}
+
+#bodyer .img-center-box .pay-suc i{
+	display: inline-block;
+	width:28px;
+	height:28px;
+	background-image: url(../images/icon-ok.png);
+	background-size:contain;
+	margin-right:10px;
+	vertical-align: middle;
+	margin-top: -5px;
+}
+
+#bodyer .img-center-box a{
+	width:80px;
+	height:80px;
+	margin:0;
+	display: inline-block;
+	margin-top:25px;
+	background-image: url(../images/icon-recharge.png);
+	background-size: contain;
+}
+
+
+.t-pay{
+	position: relative;
+	float: right;
+	margin-top:13px;
+	font-size: 14px;
+	color:#fa7a24;
+	margin-right:10px;
+}
+
+.t-pay a{
+	text-decoration: underline;
+	color:#fa7a24;
+}
+
+#bodyer p.down-txt{
+	font-size: 16px;
+	margin-top:20px;
+}
+
+.btn-download{
+	width:125px;
+	height:45px;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-size:100%;
+	background-position: center;
+	margin:20px 15px;
+	border:0;
+	outline: none;
+	display: inline-block;
+}
+
+.dl-ip{
+	background-image: url(../img/download-ip.png);
+}
+
+.dl-ad{
+	background-image: url(../img/download-ad.png);
+}
+
+
+#bodyer img.connect-pic{
+	margin-top:60px;
+}
+
+#bodyer .connect-txt{
+	font-size: 12px;
+	text-align: left;
+	text-indent: 24px;
+	line-height: 21px;
+	margin-left:20px;
+	margin-right:20px;
+}
+
+.connect-num{
+	font-size: 20px;
+	color:#fa7a24;
+	margin-top:40px;
+	margin-bottom:40px;
+}
+#bodyer p.question{
+	color:#fa7a24;
+	border-bottom:1px solid #ccc;
+}
+
+#bodyer p.question,
+#bodyer p.answer{
+	font-size: 15px;
+	text-align: left;
+	padding-top:7px;
+	padding-bottom:7px;
+}
+
+#bodyer p.answer{
+	color:#999;
+	line-height: 21px;
+	margin-left: 10px;
+}

@@ -1,0 +1,19 @@
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
+.clearFix:after {
+  display: block;
+  content: "";
+  clear: both; }
+
+.clearFix {
+  zoom: 1; }
+
+.ab {
+  position: absolute; }
+
+.re {
+  position: relative; }

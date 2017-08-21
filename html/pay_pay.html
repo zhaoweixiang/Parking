@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<!-- saved from url=(0080)https://wx.aipark.com/w2/static/page/parkPay-memberScan.html?0.9292529199738055= -->
+<html style="font-size:50px !important"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1 user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>爱泊车</title>
+		<link rel="stylesheet" href="../css/public.css">
+		<link rel="stylesheet" href="../css/newPublic.css">
+		<link rel="stylesheet" href="../css/parkPay-list.css">
+        <script src="../js/self-adaption.js"></script>
+		<style type="text/css">
+            #header .icon-back {margin-top: 0; margin-left: 0; }
+            .icon-right {
+                width: 10px;
+                height: 20px;
+                background-image: url(../images/icon-right.png);
+            }
+            .section{ margin-top:0rem; }
+            .section h3{ line-height:.7rem;}
+            .row{
+                padding-top:0rem;
+                padding-bottom:0rem;
+                height:1rem;
+            }
+            .row dl{
+                line-height:1rem;
+            }
+            .row dl dd .icon-empty{
+                top:calc(50% - 7px);
+                margin-top:0px;
+            }
+            #header .icon-back {margin-top: 0; margin-left: 0; }
+            .icon-right {
+                width: 10px;
+                height: 20px;
+                background-image: url(../images/icon-right.png);
+            }
+            .fontsize100 b{ font-size:50px; color:#333333; font-weight:100}
+            .fontsize100{ font-size:14px; color:#333333; display:block; text-align:center}
+            .textCenter{ text-align:center; font-size:14px; color:#999}
+            .section{ padding:0 15px}
+            .positonReltive{ position:relative; min-height:38px; overflow:hidden}
+            .border{ border-bottom:solid 1px #e6e6e6; display:block; z-index:-1; position:absolute; top:10px; width:94%}
+            .positionCent span{ display:inline-block; background-color:#eeeeee; padding:0 25px}
+            .mainp{ font-size:14px; color:#666; width:100%; float:left; line-height:24px}
+            .mainp span:first-child{ float:left}
+            .mainp span:last-child{ float:right}
+            .yellow span{ color:#fc7824}
+            .yellow span:last-child{ text-decoration:underline}
+            .row:not(:last-child){ border-bottom:none;}
+            .selectNo{	-webkit-user-select:none;   -moz-user-select:none;   -ms-user-select:none;   user-select:none;}
+            .icon-right-font{ color:#fa7a24; text-decoration:underline;}
+            .yellow .grey{ color:#ccc;}
+		</style>
+	    <link href="../css/layer.css" type="text/css" rel="styleSheet" id="layermcss"></head>
+	<body>
+		<!-- <div class="payImg" style="height:100%;width:100%;background:#888;opacity:0.2;position:fixed; left:0; top:0; z-index:200; display:none">
+			<img src="../img/loading.gif" style="display:block;padding:0; height:200px;width:200px; position:absolute; margin:auto; left:0; top:0; right:0; bottom:0 ">
+		</div> -->
+		<header id="header">
+			<a class="icon-back" onclick="hrefChange('pay.html')"></a>
+			<h1>停车缴费</h1>
+		</header>
+		<!--<div id="body">
+			<div class="section">
+				<h3>停车信息</h3>
+				<div class="row-block">
+               		 <div class="row">
+						<dl class="clearfix">
+							<dt>停车场名称</dt>
+							<dd name="parkName" class="fr"></dd>
+						</dl>
+					</div>
+					<div class="row">
+						<dl class="clearfix">
+							<dt>车牌号&#12288;</dt>
+							<dd name="plateNumber" class="fr"></dd>
+						</dl>
+					</div>
+                    <div class="row">
+						<dl class="clearfix">
+							<dt>入场时间</dt>
+							<dd name="entryTime" class="fr"></dd>
+						</dl>
+					</div>
+                    <div class="row">
+						<dl class="clearfix">
+							<dt>停车时长</dt>
+							<dd name="parkPeriod" class="fr"></dd>
+						</dl>
+					</div>
+                  </div>
+                </div>                
+                <div class="section">
+					<h3>订单信息</h3>
+                    <div class="row-block">
+					<div class="row">
+						<dl class="clearfix">
+							<dt>订单总额</dt>
+							<dd name="totalMoney" class="fr">-￥0.00</dd>
+						</dl>
+					</div>
+					<div class="row" id="realPayMoney">
+						<dl class="clearfix">
+							<dt>已付总额</dt>
+							<dd name="realPayMoney" class="fr">-￥0.00</dd>
+						</dl>
+					</div>
+					<div class="row park-yhq">
+						<dl class="clearfix">
+							<dt class="orange">优惠金额</dt>
+							<dd name="" class="fr orange"><span name="couponMoney"></span>  <i class="icon icon-right"></i></dd>
+						</dl>
+					</div>
+					<div class="row park-hyk" onclick="hrefChange('parkPay_integral_scan.html')">
+						<dl class="clearfix">
+							<dt>积分</dt>
+							<dd name="" class="fr"><span name="integralMoney"></span>  <i class="icon icon-right"></i></dd>
+						</dl>
+					</div>
+					<div class="row">
+						<dl class="clearfix">
+							<dt>应付金额</dt>
+							<dd name="needMoney" class="fr">￥0.00</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+			<div class="section">
+				<h3>支付方式</h3>
+				<div class="row-block">
+					<div class="row">
+						<dl class="clearfix">
+							<dd><i class="icon icon-ye"></i> 余额 <span class="grey"></span><a class="icon icon-empty icon-ok-green" pay-type="2"></a></dd>
+						</dl>
+					</div>
+					<div class="row">
+						<dl class="clearfix">
+							<dd><i class="icon icon-we"></i> 微信<a class="icon icon-empty" pay-type="1"></a></dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+			<div class="row mt30">
+				<a class="btn btn-block btn-orange">确认支付</a>
+			</div>-->
+		<div id="body">
+        	<div id="balance" style="display:none;"></div>
+			<div class="section">
+				<span class="fontsize100"><b name="needMoney"></b>元</span>
+                <p name="parkName" class="textCenter"></p>
+            </div>
+            <div class="section positonReltive">
+            	<span class="border"></span>
+				<p class="textCenter positionCent">
+					<span>订单详情</span>
+				</p>
+                <p class="mainp">
+					<span>车牌号</span><span name="plateNumber"></span>
+				</p>
+                <p class="mainp">
+					<span>入场时间</span><span name="entryTime"></span>
+				</p>
+                <p class="mainp">
+					<span>时长</span><span name="parkPeriod"></span>
+				</p>
+                <p class="mainp">
+					<span>订单总额</span><span name="totalMoney"></span>
+				</p>
+                <p class="mainp" id="realPayMoney">
+					<span>已付金额</span><span name="realPayMoney"></span>
+				</p>
+                <p id="discountPeriodId" class="mainp yellow">
+					<span>停车场优惠金额(<font name="discount"></font>折)</span>
+					<span name="discountPeriodMoney" style="text-decoration:none"></span>
+				</p>
+                <p class="mainp yellow park-hyk" onclick="hrefChange('parkPay_integral.html')">
+					<span>积分</span>
+					<e class="fr"><span name="integralMoney" style="text-decoration:underline;"></span></e>
+				</p>
+                <p class="mainp yellow park-yhq">
+                	<span>优惠金额</span>
+                    <a class="fr" style="text-decoration:underline">
+                    	<span name="couponMoney" style="text-decoration:underline;"></span>
+						<span name="direct" class="orange">&nbsp;&nbsp;&gt;</span>
+                    </a>
+                </p>
+            </div>
+			<div class="section positonReltive">
+            	<span class="border"></span>
+				<p class="textCenter positionCent"><span>支付方式</span></p>
+				<div class="">
+					<div class="row ye_Pay" style="margin-left:0px; margin-right:0px;">
+						<dl class="clearfix">
+							<dd><i class="icon icon-ye"></i>余额支付<span class="grey"></span>
+								<a class="icon icon-empty icon-ok-green" pay-type="2"></a>
+							</dd>
+						</dl>
+					</div>
+					<div class="row wx_Pay" style="margin-left:0px; margin-right:0px;">
+						<dl class="clearfix">
+							<dd><i class="icon icon-wc"></i>微信支付
+								<a class="icon icon-empty" pay-type="1"></a>
+							</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+			<div class="row mt30">
+				<a class="btn btn-block btn-orange" style="padding:0px; margin:.3rem;">确认支付<b name="needMoney1"></b>元</a>
+			</div>
+		</div>		
+        <div style="display:none">
+            <form name="total_amount_form" method="post" action="">
+                <input type="hidden" name="param" id="param_id" value="">
+                <input type="submit" value="立即支付" style="display:none">
+            </form>	
+        </div>
+	
+	<div class="notice" style="display: none;">登录失效，请重新登录</div>
+	<script src="../js/jQuery-1.11.3.min.js"></script>
+	<script src="../js/jquery.cookie.js"></script>
+	<script src="../js/jweixin-1.0.0.js"></script>
+    <!--<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>-->
+	<script src="../js/layer.js"></script>
+	<script src="../js/common.js"></script>
+    <!--<script src="../js/land.js"></script>-->
+</body>
+</html>

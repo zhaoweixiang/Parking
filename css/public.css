@@ -1,0 +1,378 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a{
+	color:#323232;
+	text-decoration: none;
+}
+
+img{border:0;}
+.yellowC{
+	color:#fa7a24;
+}
+/* 兼容的清除浮动 */
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.clearfix {
+	zoom: 1;
+	display: block;
+}
+
+body{
+	font:12px '微软雅黑'; 
+	min-width: 320px;
+	background:#eee; 
+	color:#323232;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.fl{
+	float: left;
+}
+
+.fr{
+	float: right;
+}
+
+.center{text-align: center;}
+
+/*通用头部*/
+#header{
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	height:50px;
+	background-color:#fff;
+	border-bottom:1px solid #c9c9c9;
+	z-index: 100;
+}
+
+#header .icon-back{
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 45px;
+    height: 49px;
+    background: url(../images/icon-back.png) no-repeat center center/100%;
+}
+
+#header .header-title{
+	position: absolute;
+	top:0;
+	left:44px;
+	right:44px;
+	text-align: center;
+	line-height: 50px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+  font-size: 16px;
+  font-weight: 500;
+  margin-left:10px;
+  margin-right:10px;
+}
+/*头部右侧样式：替他人缴费*/
+.t-pay{
+	position: relative;
+	float: right;
+	font-size: 14px;
+	color:#fa7a24;
+	margin-right: 5px;
+	height: 50px;
+	line-height: 50px;
+}
+
+.t-pay a{
+	text-decoration: underline;
+	color:#fa7a24;
+	font-size:16px;
+}
+
+#bodyer{padding-top:50px; padding-bottom:60px;}
+/*css 组件*/
+.wx_btn{
+	display: block;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	color: #fff;
+	margin: 0 .22rem;
+	font-size: 21px;
+	background: #fa7a24;
+	-webkit-border-radius:.08rem;
+	-moz-border-radius:.08rem;
+	border-radius:.08rem;
+}
+.wx_btn_nouse{
+	background-color:#999;
+}
+.icon{
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-color: transparent;
+	background-size: contain;
+	vertical-align: middle;
+}
+
+/*提示框*/
+/*.notice {
+	display: none;
+    position: fixed;
+    left: 20%;
+    right: 20%;
+    top: 20%;
+    text-align: center;
+    color: #fff;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    background: rgba(0,0,0,0.4);
+    padding: 12px;
+}*/
+.notice {
+	display: none;
+    position: fixed;
+    left: 20%;
+    right: 20%;
+    top: 20%;
+    text-align: center;
+    font-size:14px;
+    color: #333;
+    border-radius: 4px;
+    box-shadow:1px 1px 50px rgba(0,0,0,.3);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    background-color:#fff;
+    padding: 12px;
+    line-height:25px;
+    z-index: 103;
+}
+.notice_shade{
+	position:fixed;
+	_position:absolute;
+	pointer-events:auto;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background-color: #393D49;
+	opacity:0.6;
+	filter:alpha(opacity=60);
+	z-index: 102;
+}
+
+input{
+	font: 16px "微软雅黑";
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+
+
+/*底部导航*/
+#nav-bar-bottom{
+	position: fixed;
+	bottom:0;
+	left:0;
+	right:0;
+	height:65px;
+	border-top:1px solid #c9c9c9;
+	background-color:#fff;
+	text-align: center;
+}
+
+#nav-bar-bottom a{
+	display: inline-block;
+  	width:32%;
+	text-align: center;
+	padding-top:10px;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
+
+.icon-ypark,
+.icon-park,
+.icon-pay,
+.icon-user,
+.icon-about{
+	width:.52rem;
+	height:.42rem;
+}
+
+.icon-ypark{background-image: url(../images/icon/icon-ypark.png);}
+.icon-park{background-image: url(../images/icon-park.png);}
+.icon-pay{background-image: url(../images/icon-pay.png);}
+.icon-user{background-image: url(../images/icon-user.png);}
+.icon-about{background-image: url(../images/icon-about.png);}
+
+.icon-parkv,
+.icon-phonev{
+	width:25px;
+	height:26px;
+}
+.icon-parkv{background-image: url(../images/icon-park1.png);}
+.icon-phonev{background-image: url(../images/icon-phone.png);}
+.icon-car{width:26px;height:26px;background-image: url(../images/icon-car.png); vertical-align:top;}
+
+.icon-record-car,
+.icon-record-park,
+.icon-record-in,
+.icon-record-out{
+	width:26px;
+	height:26px;
+	padding-right:10px;
+}
+
+.icon-record-car{background-image: url(../images/icon-record-car.png);}
+.icon-record-park{background-image: url(../images/icon-record-park.png);}
+.icon-record-in{background-image: url(../images/icon-record-in.png);}
+.icon-record-out{background-image: url(../images/icon-record-out.png);}
+
+.icon-qf{width:100px;height:27px;background-image: url(../images/icon-qf.png);}
+.icon-wz{width:85px;height:27px;background-image: url(../images/icon-wz.png);}
+.icon-wzqf{width:141px;height:27px;background-image: url(../images/icon-wzqf.png);}
+
+#nav-bar-bottom a span{
+	display: block;
+	font-size:10px;
+	color:#515151;
+	margin-top:5px;
+}
+
+#nav-bar-bottom a.act span{color:#fa7a24;}
+
+#nav-bar-bottom a.act .icon-park{background-image: url(../images/icon-park2.png);}
+#nav-bar-bottom a.act .icon-pay{background-image: url(../images/icon-pay2.png);}
+#nav-bar-bottom a.act .icon-user{background-image: url(../images/icon-user2.png);}
+#nav-bar-bottom a.act .icon-about{background-image: url(../images/icon-about2.png);}
+#nav-bar-bottom a.act .icon-ypark{background-image: url(../images/icon-ypark2.png);}
+
+/*不可点击*/
+.disableCss{
+
+pointer-events:none;
+
+color:#fff;
+
+background-color:#ccc;
+
+cursor:default
+
+}
+
+/*按钮*/
+.wx-btn-sub{
+  display: block;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  color: #fff;
+  width:90%;
+  margin: 0 5%;
+  font-size: 21px;
+  background: #fa7a24;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  border:0;
+  outline: none;
+}
+.wx-czf{
+	float:right;
+	height:100px;
+	line-height: 100px;
+	text-align: center;
+	font-size: 21px;
+	color: #fff;
+  	background: #fa7a24;
+  	width:30%;
+}
+.btn-bottom{
+	font:15px "微软雅黑";
+	background-color: #fa7a24;
+	width: 100%;
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+	text-align:center;
+	position: fixed;	
+	bottom: 0px;
+	left:0px;
+}
+/*均分*/
+.boxAll{
+	width:100%;
+	display: -moz-box;
+    display: -webkit-box;
+    display: box;
+}
+.boxOne{
+	-moz-box-flex: 1.0;
+    -webkit-box-flex: 1.0;
+    box-flex: 1.0;
+}
+/*userCenter_wallet_yhj.html用户中心优惠券*/
+.use-rule{
+	float: right;
+	line-height: 50px;
+	color: #fa7a24;
+	margin-right: 5px;
+	font-size: 16px;
+}

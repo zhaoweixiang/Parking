@@ -1,0 +1,66 @@
+.parkPay-list{
+	margin:0rem 1.45rem;
+}
+
+.parkPay-list li{
+	margin-top:.24rem;
+	background-color:#fff;
+	border:1px solid #c5c5c5;
+	line-height:.98rem;
+	font-size:.32rem;
+	color:#333;
+	text-align:center;
+}
+
+.parkPay-list li h2,
+.parkPay-list li .parkPay-info{
+	padding-top:12px;
+	padding-bottom:12px;
+	padding-right:15px;
+}
+
+.parkPay-list li h2{
+	position: relative;
+	font-size: 15px;
+	color:#333;
+	font-family: '黑体';
+	border-bottom:1px solid #c9c9c9;
+}
+
+.parkPay-list li h2 .btn-orange{
+	position: absolute;
+	top:6px;
+	right:15px;
+	padding:6px 12px;
+	border-radius: 3px;
+}
+
+.parkPay-info dl:not(:last-child){
+	padding-bottom:5px;
+}
+
+.parkPay-info dl dt{
+	float: left;
+}
+
+.parkPay-info dl dt,
+.parkPay-info dl dd{
+	font-size:14px;
+	color:#666;
+}
+
+.parkPay-info dl dd{
+	text-align: right;
+}
+.noRecord p a{
+	text-decoration: underline;
+	color: #00a0e8;
+}
+.icon-right {
+	width: 10px;
+	height: 20px;
+	background-image: url(../images/icon-right.png);
+}
+.pay_tip{ font-size:.26rem; color:#999; line-height:100%; margin:.24rem 0 0 0; display:none;}
+.to_plate,.to_plate2{ text-align:center; margin-top:.85rem; display:none;}
+.to_plate a,.to_plate2 a{  color:#fa7a24; font-size:.28rem; text-decoration:underline;}

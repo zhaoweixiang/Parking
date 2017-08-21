@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<!-- saved from url=(0092)https://wx.aipark.com/w2/static/page/add_license_memberNewEnergyPay.html?0.4039131982717663= -->
+<html lang="en" style="font-size:50px !important">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<title>爱泊车</title>
+	<link rel="stylesheet" type="text/css" href="../css/public.css">
+	<link rel="stylesheet" type="text/css" href="../css/add_licenseAndreplace_pay.css">
+    <link href="../css/passwordkeyboard.css" rel="stylesheet" type="text/css">
+    <script src="../js/self-adaption.js"></script>
+    <script src="../js/jQuery-1.11.3.min.js"></script>
+    <script src="../js/fastclick.js"></script>
+    <script src="../js/pay2.js"></script>
+    <script>
+		window.addEventListener('load', function() {
+			$("#password input").each(function(index, element) {
+                $("#password input").val();
+            });		 
+		});
+		window.addEventListener('load', function() {
+		  FastClick.attach(document.body);
+		}, false);
+	</script>
+</head>
+<body id="bodyHei">   
+	<div id="bodyer" style="padding-top:0rem;">
+    	<div class="imgCar"></div>	
+        <div class="noMember-tip center">请输入缴费的车牌号</div> 	
+        <div class="content">           
+            <div class="passDiv2" style="margin-bottom:1.02rem">
+                <form id="password" disabled="disabled">
+                    <input readonly="" class="pass pass_left" maxlength="1" value="京">
+                    <input readonly="" class="pass curr" maxlength="1" value="">
+                    <input readonly="" class="pass" maxlength="1" value="">
+                    <input readonly="" class="pass" maxlength="1" value="">
+                    <input readonly="" class="pass" maxlength="1" value="">
+                    <input readonly="" class="pass" maxlength="1" value="">
+                    <input readonly="" class="pass" maxlength="1" value="">
+                    <input readonly="" class="pass pass_right" maxlength="1" value="">
+                </form>
+            </div>
+            <div id="passText" class="hide"></div>
+        </div>        
+        <div class="wx_btn wx_btn_no" id="cg_confirm" style=" margin-bottom:.4rem; " onclick="queryPlateNumber('pay_pay.html')">查询</div>
+        <div class="center" style="margin:0 0.22rem;">
+            <a class="localCar newEnergy" onclick="hrefChange('pay.html')" id="local">切换为普通车&gt;&gt;</a>
+            <!--<a class="skip newEnergyR hide" onclick="hrefChange('userCenter_account.html')">跳过&gt;&gt; </a>-->
+        </div>
+        <div id="keyboardDIV">
+			<div id="key" style="position:absolute;background-color:#A8A8A8;width:100%;bottom:0px;">
+				<ul class="number" id="keyboard" style="font-size:20px; padding-bottom:.2rem;">
+					<li class="tab_sure"><span class="sure">确定</span></li>
+					<li class="symbol tab_left"><span class="off">0</span></li>
+					<li class="symbol"><span class="off">1</span></li>
+					<li class="symbol"><span class="off">2</span></li>
+					<li class="symbol btn_number_"><span class="off">3</span></li>
+					<li class="symbol"><span class="off">4</span></li>
+					<li class="symbol"><span class="off">5</span></li>
+					<li class="symbol btn_number_"><span class="off">6</span></li>
+					<li class="symbol"><span class="off">7</span></li>
+					<li class="symbol"><span class="off">8</span></li>
+					<li class="symbol btn_number_ tab_right"><span class="off">9</span></li>
+					<li class="symbol tab_left"><span class="off">Q</span></li>
+					<li class="symbol"><span class="off">W</span></li>
+					<li class="symbol"><span class="off">E</span></li>
+					<li class="symbol btn_number_"><span class="off">R</span></li>
+					<li class="symbol"><span class="off">T</span></li>
+					<li class="symbol"><span class="off">Y</span></li>
+					<li class="symbol btn_number_"><span class="off">U</span></li>
+					<li class="symbol"><span class="off">I</span></li>
+					<li class="symbol"><span class="off">O</span></li>
+					<li class="symbol btn_number_ tab_right"><span class="off">P</span></li>
+					<li class="symbol tab_left"><span class="off">A</span></li>
+					<li class="symbol"><span class="off">S</span></li>
+					<li class="symbol"><span class="off">D</span></li>
+					<li class="symbol btn_number_"><span class="off">F</span></li>
+					<li class="symbol"><span class="off">G</span></li>
+					<li class="symbol"><span class="off">H</span></li>
+					<li class="symbol btn_number_"><span class="off">J</span></li>
+					<li class="symbol"><span class="off">K</span></li>
+					<li class="symbol"><span class="off">Z</span></li>
+					<li class="symbol btn_number_ tab_right"><span class="off">X</span></li>
+					<li class="symbol last_line"><span class="off">C</span></li>
+					<li class="symbol"><span class="off">V</span></li>
+					<li class="symbol btn_number_"><span class="off">B</span></li>
+					<li class="symbol"><span class="off">N</span></li>
+					<li class="symbol"><span class="off">M</span></li>
+					<li class="symbol"><span class="off">L</span></li>
+					<li class="delete lastitem"><img class="del" src="../images/tjcl_kb_del.png"></li>
+				</ul>
+			</div>
+		</div>
+    </div>   	
+	<div class="notice" style="display: none;">登录失效，请重新登录</div>
+	<!--<script src="html/jquery.cookie.js"></script>-->
+	<script src="../js/common.js"></script>
+	<script>
+	//判断是否登录
+//			var pageUrl = window.location.href;
+//			$.cookie('pageUrl',pageUrl, { expires: 7,path: '/' });
+//			// if(openId == undefined){
+//				$.invokeAjax({
+//					url:default_url+'session/get',
+//					data:{'param':'{}'},
+//					async:false,
+//					sucfun:function(msg){
+//						if(msg.code == '0000'){
+//							var opid = msg.data.openId;
+//							if(opid == null || opid == ''){
+//								window.location.href=default_url+'session/set?urlback='+pageUrl;
+//							}else{
+//								block_tag=true;
+//								$.cookie('openid',opid, { expires: 7,path: '/' });
+//								$.cookie('isBind',msg.data.isBind, { expires: 7,path: '/' });
+//								$.cookie('token',msg.data.token, { expires: 7,path: '/' });
+//
+//								/*if(isBind != 1){
+//									window.location.href='login.html';
+//								}*/
+//							}
+//						}else{
+//							popBox(msg.msg);
+//						}
+//					}
+//				});
+//
+			function queryPlateNumber(){
+					if($("#cg_confirm").hasClass("wx_btn_no")){
+						$("#cg_confirm").unbind();
+						return false;
+					}else{
+						$("#cg_confirm").bind("click");
+					}
+					var re = /^[\u4e00-\u9fa5]{1}[A-Z]{1}[A-Z_0-9]{6}$/;
+					var v = $('#passText').html();
+					if(!re.test(v)){
+						popBox('车牌号格式不正确');
+						return;
+					}else{
+						var param = {
+							data:{
+								plateNumber:v
+							}
+						};
+						$.ajax({
+							type : "post",
+							data : {'param':JSON.stringify(param)},
+							url :default_url+"tobOrder/inputPlateNumberQuery",
+							async:false,
+							dateType : "json",
+							success : function(response) {
+								var resp = JSON.parse(response);
+								if(resp.code == '0000'){
+									var isBind = $.cookie('isBind');
+									if( isBind != 1){
+										goPage(resp.data.TobOrder,'parkPay-noMember-detail.html');
+									}else{
+										goPage(resp.data.TobOrder,'parkPay-memberScan.html');
+									}
+								}else{
+									hrefChange('pay_fail.html');
+									return;
+								}
+							},
+							fail:function(){
+								popBox('网络异常，请稍后重试');
+							},
+							error : function(err) {
+								if (err.status == 910) {
+									updateToken();
+								}
+								else{
+									popBox("网络错误!");
+								}
+							}
+						});
+					}
+				}
+	</script>
+</body>
+</html>
